@@ -56,6 +56,7 @@ module Uppy
 
           # OPTIONS /s3/multipart
           r.options ["", true] do
+            response.headers['access-control-allow-headers'] = 'Content-Type'
             r.halt 204
           end
 
